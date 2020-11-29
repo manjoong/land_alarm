@@ -9,6 +9,7 @@ import logging
 
 URL = "https://m.land.naver.com/cluster/ajax/articleList"
 
+
 # https://m.land.naver.com/cluster/ajax/articleList?rletTpCd=OPST&tradTpCd=B1&z=15&lat=37.366047&lon=127.108101&btm=37.3513279&lft=127.0858494&top=37.3807632&rgt=127.1303526&sort=dates&page=1
 
 param = {
@@ -90,8 +91,9 @@ def add_newst():
 
 def main():
     global newest #새로운 아이템 저장되는 배열
-    global old_id  #가장 최신이였던 매물의 id값
+    global new_id #이번에 새로운 최신 매물 id 의 값
     global last #id가 있음을 확인하고 main의 while을 멈추는 트리거
+    global old_id
     last = False
 
     newest = []
@@ -99,7 +101,7 @@ def main():
     while 1:
         check_jungja(page)
         if page == 1:
-            old_id = data['body'][0]['atclNo'] #가장 최신이였던 매물의 id값
+            new_id = data['body'][0]['atclNo'] #가장 최신인 매물의 id값 일단 저장
             # old_id = '2065012896'
 
         add_newst()
@@ -118,9 +120,16 @@ def main():
     MyFile.write("\n")
     MyFile.write(str(newest))
     MyFile.close()
+
+    newest=[] #다음(5분뒤 실행할) 최신 목록 리스트업을 위해 배열을 비움
+    print("new id: ", new_id, "old_id: ", old_id)
+    old_id = new_id #기존에 최신이였던 old_id가 새로 최신인 new_id로 갱신
     threading.Timer(300, main).start()
+
  
         
 
+check_jungja(1) #최조 첫번째 매물을 알기위해 함수 실행
+old_id=data['body'][0]['atclNo']  #전에 돌렸을때 가장 최신이였던 매물의 id값
 
 main()
