@@ -7,21 +7,23 @@ import json
 import logging
 import sys
 
-latitude #위도 
-longitude #경도
 
 
 def find_station_location(station_id):
-    global latitude
-    global longitude
+    print(station_id)
+    location = []
     with open('/root/station.json') as json_file:
         station_data = json.load(json_file)
     station_result = station_data["subways"]["subway"]
-    for idx, value in enumerate(result):
-        if value["stnId"] == station_id:
+    # print(station_result)
+    for idx, value in enumerate(station_result):
+        if int(value["stnId"]) == int(station_id):
             latitude = value["latitude"]
             longitude = value["longitude"]
+            location.append(latitude)
+            location.append(longitude)
             break
+    return location
             
             
 
@@ -56,21 +58,19 @@ def find_content(id, all_content):
 
 
 #외부에서 데이터를 불러오는 함수
-def get_prd():
-    global latitude
-    global longitude
+def get_prd(location):
 
     URL = "https://m.land.naver.com/cluster/ajax/articleList"
     param = {
         'rletTpCd': str(sys.argv[2]),
         'tradTpCd': 'B1',
         'z': '15',
-        'lat': str(latitude),
-        'lon': str(longitude),
-        'btm': str(latitude-0.015),
-        'lft': str(longitude-0.015),
-        'top': str(latitude+0.015),
-        'rgt': str(longitude+0.015),
+        'lat': str(location[0]),
+        'lon': str(location[1]),
+        'btm': str(location[0]-0.015),
+        'lft': str(location[1]-0.015),
+        'top': str(location[0]+0.015),
+        'rgt': str(location[1]+0.015),
         'sort': 'dates',
     }
 
@@ -119,6 +119,7 @@ def get_prd():
 def main():
     global old_prd_list
     global old_prd_id_list
+    global station_location
 
     now= time.localtime()
     new_prd_id = [] #새로 추가된 매물의 id 배열
@@ -126,7 +127,7 @@ def main():
     new_prd = [] #새로 추가된 매물의 전체 정보
     delete_prd = []  # 삭제된 매물의 전체 정보
     
-    new_prd_list = get_prd() #새로 데이터 불러옴
+    new_prd_list = get_prd(station_location) #새로 데이터 불러옴
     new_prd_id_list = make_id_list(new_prd_list) 
     new_prd_id = find_new_prd(old_prd_id_list, new_prd_id_list)
     delete_prd_id = find_delete_prd(old_prd_id_list, new_prd_id_list)
@@ -184,15 +185,14 @@ def main():
     old_prd_id_list = new_prd_id_list 
     threading.Timer(300, main).start()
 
- 
-find_station_location(sys.argv[1])
 
-# new_prd_list = [] #새로 불러온 매물 목록이 들어있는 배열
+station_location=find_station_location(sys.argv[1])
+
+
 old_prd_list = [] #기존에 불러온 매물 목록이 들어있는 배열
-# new_prd_id_list = [] # 새로 불러온 매물 목록의 id만 모아둔 배열
 old_prd_id_list = [] # 기존에 불러온 매물 목록의 id만 모아둔 배열
 
-old_prd_list = get_prd() #최초 한번 매물 리스트 함수 실행
+old_prd_list = get_prd(station_location) #최초 한번 매물 리스트 함수 실행
 old_prd_id_list = make_id_list(old_prd_list) #뽑은 매물 리스트에서 id값만 추출한 배열 생성
 
 main()
