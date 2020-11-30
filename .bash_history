@@ -295,3 +295,320 @@ cd in
 cat inventory 
 docker ps
 exit
+ls
+cat new_prd_list_new.txt 
+ls
+ps -ef |grep python
+ls
+tail -f new_prd_list.txt 
+df -h
+ps -ef |grep python
+kill -9 2153
+ps -ef |grep python
+ls
+tail -f new_prd_list.txt 
+ls
+cd test/
+ls
+vi new_prd_list_new.txt 
+ps -ef |grep python
+ls
+cd ..
+ls
+tail -f new_prd_list.txt 
+ls
+cd ..
+ls
+cd root/
+ls
+cat naver_land.py 
+ls
+nohup python -u naver_land.py &
+ls
+tail -f new_prd_list.txt 
+ls
+pwd
+cd app/
+ls
+cd awx/
+ls
+cd installer/
+ls
+cat inventory 
+ls
+cd rp
+ls
+cd roles/
+ls
+cd local_docker/
+ls
+cd templates/
+ls
+cat environment.sh.j2 
+cat credentials.py.j2 
+ls
+cat docker-compose.yml.j2 
+ls
+pwd
+cd ..
+ls
+cd ..
+ls
+cd ..
+ls
+cd ..
+ls
+cd ..
+ls
+cd ..
+ls
+rm -rf app/
+git add .
+git commit -m "123"
+git push origin master
+ls
+cd ..
+ls
+cd home
+l
+ls
+cd ~/.awx/
+ls
+cd awxcompose/
+ls
+pwd
+sudo amazon-linux-extras install epel -y
+sudo yum -y install epel-release 
+sudo yum -y install yum-utils ansible git python-pip gcc
+ps -ef 
+ls
+ps -ef |grep python
+ls
+pwd
+cd /root
+ls
+python parse_json.py 
+python3
+python3 parse_json.py 
+ls
+python3 parse_json.py 
+ls
+cd test/
+ls
+tail -f new_prd_list_new.txt 
+rm -rf new_prd_list_new.txt 
+ls
+ps -ef |grep python
+cd ..
+ls
+cd test/
+ls
+rm -rf naver_land_new.py 
+ls
+mkdir test
+cd test/
+ls
+cp ../naver_land_new_2.py ./
+ls
+vi new_prd_list_new_2.txt
+ls
+python naver_land_new_2.py 1 OPST
+ps -ef |grep python
+kill -9 28607
+ls
+ps -ef |grep python
+ls
+cd ..
+cd test/
+ls
+cat new_prd_list_new_2.txt 
+ls
+cd ..
+ls
+pwd
+cd ..
+ls
+git dd .
+gi add .
+git add .
+git commit -m "python naver_land_new.py "
+git push origin master
+ls
+cd test/
+ls
+cd test/
+ls
+mv naver_land_new_2.py parse_land_1.0.py
+ls
+mv parse_land_1.0.py parse_land.py 
+ks
+ls
+mv new_prd_list_new_2.txt new_prd_list.txt 
+ls
+pwd
+ls
+cd ..
+ls
+cd ..
+ls
+pwd
+mkdir station_list
+ls
+cd station_list/
+ls
+mkdir org_code
+ls
+cd ..
+ls
+cp test/test/ station_list/
+cp -r test/test/ station_list/
+ls
+cd station_list/
+ls
+rm -rf org_code/
+mv test/ org_code
+ls
+cd org_code/
+ls
+vi new_prd_list.txt 
+ls
+vi parse_land.py 
+ls
+pwd
+cd /root
+cp /root/station_list/org_code/ /root/station_list/1
+cp -r /root/station_list/org_code/ /root/station_list/1
+cd station_list/
+ls
+rm -rf 1
+ls
+cd org_code/
+ls
+cd ..
+ls
+cd 2/
+ls
+ps -ef |grep nohip
+ps -ef |grep python
+ls
+pwd
+ls
+cat new_prd_list.txt 
+ps -ef |grep python
+ls
+pwd
+ls
+cd ..
+ls
+cd 2/
+ls
+cd org_code/
+ls
+cd ..
+ls
+cd or
+ls
+cd org_code/
+ls
+ps -ef |grep python
+kill -9 29278
+ls
+cd ../..
+ls
+cd ..
+ls
+pwd
+cd station_list/
+ls
+rm -rf 2/
+ls
+cd 2/
+ls
+cd ..
+ls
+cd ..
+ls
+tail -f nohup.out 
+pwd
+ls
+cd ..
+ls
+cd root/
+s
+ls
+cd station_list/
+ls
+cd 2/
+ls
+ls -al
+ps -ef |grep python
+kill -9 29508
+ls
+pwd
+cd ..
+ls
+rm -rf 2/
+ls
+cd 2/
+ls
+ps -ef |grep python
+kill -9 29743
+ls
+pwd
+cd ..
+ls
+rm -rf 2
+ls
+cd 2/
+ls
+tail -f nohup.out 
+ps -ef |grep python
+ls
+pwd
+ls
+cd ..
+ls
+ps -ef |grep python
+kill -9 27122 29970
+ps -ef |grep python
+ls
+cd 2
+ls
+tail -f nohup.out 
+tail -f nohup.out  -n 1000
+ls
+cd ..
+ls
+cd ..
+ls
+cd test/
+ls
+cd test/
+ls
+cd ..
+ls
+rm -rf test/
+ps -ef |grep python
+ls
+cd ..
+ls
+cd station_list/
+ls
+cd 3/
+ls
+tail -f nohup.out 
+ps -ef |grep 
+ps -ef |grep python
+kill -9 31058
+ls
+cd ..
+ls
+rm -rf 2 3
+ls
+ls
+cd test/
+ls
+tail -f nohup.out 
+ls
+tail -f nohup.out 
+tail -f nohup.out  -n 10000

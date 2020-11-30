@@ -140,9 +140,9 @@ def main():
 
     print "%04d/%02d/%02d %02d:%02d:%02d" % (now.tm_year, now.tm_mon, now.tm_mday, now.tm_hour+9, now.tm_min, now.tm_sec)
     print("기존 매물의 갯수는")
-    print(len(new_prd_list))
-    print("새 데이터의 매물의 갯수는")
     print(len(old_prd_list))
+    print("새 데이터의 매물의 갯수는")
+    print(len(new_prd_list))
     print("새로운 매물의 id는")
     if len(new_prd) != 0:
         for i in new_prd:
@@ -170,7 +170,7 @@ def main():
     print("새로운 매물과 삭제된 매물은 5분씩 검색하며, 정보는 new_prd_list_new_2.txt에 저장 됩니다.")
 
     if len(new_prd) != 0 or len(delete_prd) !=0:
-        MyFile = open('new_prd_list_new_2.txt', 'a')
+        MyFile = open('new_prd_list.txt', 'a')
         MyFile.write("\n")
         MyFile.write("%04d/%02d/%02d %02d:%02d:%02d" % (now.tm_year, now.tm_mon, now.tm_mday, now.tm_hour+9, now.tm_min, now.tm_sec))
         MyFile.write("추가된 매물")
