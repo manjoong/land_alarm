@@ -6,7 +6,12 @@ import requests
 import json
 import logging
 import sys
+from fake_useragent import UserAgent
 
+
+
+
+ua = UserAgent()
 
 
 def find_station_location(station_id):
@@ -75,7 +80,9 @@ def get_prd(location):
     }
 
     header = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.220 Whale/1.3.51.7 Safari/537.36',
+        'User-Agent': ua.random,
+        #'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.220 Whale/1.3.51.7 Safari/537.36',
+	#'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4280.67 Safari/537.36',
         'Referer': 'https://m.land.naver.com/'
     }
 
@@ -88,8 +95,11 @@ def get_prd(location):
         param['page'] = page
         data=[]
         resp = requests.get(URL, params=param, headers=header)
+        time.sleep(10)
         if resp.status_code != 200:
             logging.error('invalid status: %d' % resp.status_code)
+        else:
+            print("200 정상")
 
         data = json.loads(resp.text)
 
@@ -184,7 +194,6 @@ def main():
     old_prd_list = new_prd_list #기존에 최신이였던 배열이 old로 갱신
     old_prd_id_list = new_prd_id_list 
     threading.Timer(300, main).start()
-
 
 station_location=find_station_location(sys.argv[1])
 

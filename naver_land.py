@@ -6,7 +6,12 @@ import datetime
 import requests
 import json
 import logging
+from fake_useragent import UserAgent
 
+
+
+
+ua = UserAgent()
 URL = "https://m.land.naver.com/cluster/ajax/articleList"
 
 # https://m.land.naver.com/cluster/ajax/articleList?rletTpCd=OPST&tradTpCd=B1&z=15&lat=37.366047&lon=127.108101&btm=37.3513279&lft=127.0858494&top=37.3807632&rgt=127.1303526&sort=dates&page=1
@@ -31,8 +36,8 @@ param = {
 }
 
 header = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.220 Whale/1.3.51.7 Safari/537.36',
-    'Referer': 'https://m.land.naver.com/'
+    'User-Agent': ua.random,
+    'Referer': 'https://www.naver.com'
 }
 
 logging.basicConfig(level=logging.INFO)
@@ -75,7 +80,6 @@ def check_jungja():
     MyFile.close()
 
     old_id = newPrdId
-
-    threading.Timer(120, check_jungja).start()
+    #threading.Timer(900, check_jungja).start()
 
 check_jungja()
