@@ -10,37 +10,9 @@ from fake_useragent import UserAgent
 
 
 
+
 ua = UserAgent()
 
-def check_connection_permit(que_file):
-    f = open(str(que_file),'r')
-    line = f.readlines()
-    f.close()
-    if len(line) != 0:
-        last_line = line[-1]
-        if int(last_line) == int(sys.argv[1]):
-            return True
-
-def request_connection_permit(que_file):
-    f = open(str(que_file),'r+')
-    lines = f.read()
-    f.seek(0, 0) #get to the first position
-    f.write(str(sys.argv[1]).rstrip('\r\n') + '\n' + lines)
-    f.close()
-
-
-def delete_connection_permit(que_file):
-    f = open(str(que_file),'r')
-    lines = f.read()
-    f.close()
-    m=lines.split("\n")
-    s="\n".join(m[:-1])
-    f = open(str(que_file),'w+')
-    for i in range(len(s)):
-        f.write(s[i])
-    f.close()
-
-    
 
 def find_station_location(station_id):
     print(station_id)
@@ -92,79 +64,66 @@ def find_content(id, all_content):
 
 #외부에서 데이터를 불러오는 함수
 def get_prd(location):
-    time.sleep(3)
-    if check_connection_permit("/root/que.txt")==None: #만약 내 차례가 오지 않았다면,
-        while True:
-            time.sleep(3) #3초 주기로 확인할 것
-            print("대기")
-            if check_connection_permit("/root/que.txt"): #만약 내 차례가 오면 나가기
-                break  
-    time.sleep(3)
-    if check_connection_permit("/root/que.txt"):  # que를 통해 내 차례가 오면... naver api와 통신 실행
-        URL = "https://m.land.naver.com/cluster/ajax/articleList"
-        param = {
-            'rletTpCd': str(sys.argv[2]),
-            'tradTpCd': 'B1',
-            'z': '15',
-            'lat': str(location[0]),
-            'lon': str(location[1]),
-            'btm': str(location[0]-0.015),
-            'lft': str(location[1]-0.015),
-            'top': str(location[0]+0.015),
-            'rgt': str(location[1]+0.015),
-            'sort': 'dates',
-        }
 
-        header = {
-            'User-Agent': ua.random,
-            #'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.220 Whale/1.3.51.7 Safari/537.36',
-        #'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4280.67 Safari/537.36',
-            'Referer': 'https://m.land.naver.com/'
-        }
+    URL = "https://m.land.naver.com/cluster/ajax/articleList"
+    param = {
+        'rletTpCd': str(sys.argv[2]),
+        'tradTpCd': 'B1',
+        'z': '15',
+        'lat': str(location[0]),
+        'lon': str(location[1]),
+        'btm': str(location[0]-0.015),
+        'lft': str(location[1]-0.015),
+        'top': str(location[0]+0.015),
+        'rgt': str(location[1]+0.015),
+        'sort': 'dates',
+    }
 
-        logging.basicConfig(level=logging.INFO)
+    header = {
+        'User-Agent': ua.random,
+        #'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.220 Whale/1.3.51.7 Safari/537.36',
+	#'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4280.67 Safari/537.36',
+        'Referer': 'https://m.land.naver.com/'
+    }
 
-        page = 0
-        result = []
-        while True:
-            page += 1
-            param['page'] = page
-            data=[]
-            resp = requests.get(URL, params=param, headers=header)
-            time.sleep(3) #3초 쉬고 다음 역
-            if resp.status_code != 200:
-                logging.error('invalid status: %d' % resp.status_code)
-            else:
-                print("200 정상")
+    logging.basicConfig(level=logging.INFO)
 
-            data = json.loads(resp.text)
+    page = 0
+    result = []
+    while True:
+        page += 1
+        param['page'] = page
+        data=[]
+        resp = requests.get(URL, params=param, headers=header)
+        time.sleep(2.6)
+        if resp.status_code != 200:
+            logging.error('invalid status: %d' % resp.status_code)
+        else:
+            print("200 정상")
 
-            for i in data['body']:
-                result.append(i)
+        data = json.loads(resp.text)
 
-            if result is None:
-                logging.error('no datas')
+        for i in data['body']:
+            result.append(i)
 
-            if data['more'] == False: #끝까지 왔다면
-                break
+        if result is None:
+            logging.error('no datas')
 
-        # newPrdId=result[0]['atclNo']
-        # newPrdName=result[0]['atclNm']
-        # newPrdDate=result[0]['atclCfmYmd']
-        # newPrdName=newPrdName.encode('utf8')
-        # newPrdDate=newPrdDate.encode('utf8')
-    
-        # print(newPrdId, newPrdName)
-        # print(newPrdName)
-        # print(newPrdDate)
-        # print "%04d/%02d/%02d %02d:%02d:%02d" % (now.tm_year, now.tm_mon, now.tm_mday, now.tm_hour+9, now.tm_min, now.tm_sec)
-        # print(result)
-        delete_connection_permit(("/root/que.txt")) #실행이 끝났으니 맨 밑 실행 목록에서 지움
-        request_connection_permit("/root/que.txt") # que의 맨 위에 내 station id를 넣음
-        return result
+        if data['more'] == False: #끝까지 왔다면
+            break
 
-        
-
+    # newPrdId=result[0]['atclNo']
+    # newPrdName=result[0]['atclNm']
+    # newPrdDate=result[0]['atclCfmYmd']
+    # newPrdName=newPrdName.encode('utf8')
+    # newPrdDate=newPrdDate.encode('utf8')
+   
+    # print(newPrdId, newPrdName)
+    # print(newPrdName)
+    # print(newPrdDate)
+    # print "%04d/%02d/%02d %02d:%02d:%02d" % (now.tm_year, now.tm_mon, now.tm_mday, now.tm_hour+9, now.tm_min, now.tm_sec)
+    # print(result)
+    return result
             
 
 def main():
@@ -234,20 +193,16 @@ def main():
     
     old_prd_list = new_prd_list #기존에 최신이였던 배열이 old로 갱신
     old_prd_id_list = new_prd_id_list 
-    threading.Timer(10, main).start()
-
-
+    threading.Timer(3, main).start()
 
 station_location=find_station_location(sys.argv[1])
 
 
 old_prd_list = [] #기존에 불러온 매물 목록이 들어있는 배열
 old_prd_id_list = [] # 기존에 불러온 매물 목록의 id만 모아둔 배열
-request_connection_permit("/root/que.txt") ##주선 추가
+
 old_prd_list = get_prd(station_location) #최초 한번 매물 리스트 함수 실행
 old_prd_id_list = make_id_list(old_prd_list) #뽑은 매물 리스트에서 id값만 추출한 배열 생성
 
 main()
-# print(check_connection_permit("/root/que.txt"))
-# request_connection_permit("/root/que.txt")
-# delete_connection_permit("/root/que.txt")
+
