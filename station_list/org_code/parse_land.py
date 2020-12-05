@@ -34,6 +34,8 @@ def delete_connection_permit(que_file):
     lines = f.read()
     f.close()
     m=lines.split("\n")
+    if m[-1] == '':
+        m.pop()
     s="\n".join(m[:-1])
     f = open(str(que_file),'w+')
     for i in range(len(s)):
@@ -92,6 +94,7 @@ def find_content(id, all_content):
 
 #외부에서 데이터를 불러오는 함수
 def get_prd(location):
+    request_connection_permit("/root/que.txt") # que의 맨 위에 내 station id를 넣음
     time.sleep(3)
     if check_connection_permit("/root/que.txt")==None: #만약 내 차례가 오지 않았다면,
         while True:
@@ -148,19 +151,7 @@ def get_prd(location):
             if data['more'] == False: #끝까지 왔다면
                 break
 
-        # newPrdId=result[0]['atclNo']
-        # newPrdName=result[0]['atclNm']
-        # newPrdDate=result[0]['atclCfmYmd']
-        # newPrdName=newPrdName.encode('utf8')
-        # newPrdDate=newPrdDate.encode('utf8')
-    
-        # print(newPrdId, newPrdName)
-        # print(newPrdName)
-        # print(newPrdDate)
-        # print "%04d/%02d/%02d %02d:%02d:%02d" % (now.tm_year, now.tm_mon, now.tm_mday, now.tm_hour+9, now.tm_min, now.tm_sec)
-        # print(result)
         delete_connection_permit(("/root/que.txt")) #실행이 끝났으니 맨 밑 실행 목록에서 지움
-        request_connection_permit("/root/que.txt") # que의 맨 위에 내 station id를 넣음
         return result
 
         
@@ -243,7 +234,6 @@ station_location=find_station_location(sys.argv[1])
 
 old_prd_list = [] #기존에 불러온 매물 목록이 들어있는 배열
 old_prd_id_list = [] # 기존에 불러온 매물 목록의 id만 모아둔 배열
-request_connection_permit("/root/que.txt") ##주선 추가
 old_prd_list = get_prd(station_location) #최초 한번 매물 리스트 함수 실행
 old_prd_id_list = make_id_list(old_prd_list) #뽑은 매물 리스트에서 id값만 추출한 배열 생성
 

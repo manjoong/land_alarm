@@ -43,6 +43,20 @@ header = {
 logging.basicConfig(level=logging.INFO)
 page = 0
 
+def delete_connection_permit(que_file):
+    f = open(str(que_file),'r')
+    lines = f.read()
+    f.close()
+    m=lines.split("\n")
+    if m[-1] == '':
+        print("공백이 있네..")
+    print(m)
+    # s="\n".join(m[:-1])
+    # f = open(str(que_file),'w+')
+    # for i in range(len(s)):
+    #     f.write(s[i])
+    # f.close()
+
 def check_jungja():
 
     now = time.localtime()
@@ -82,4 +96,5 @@ def check_jungja():
     old_id = newPrdId
     #threading.Timer(900, check_jungja).start()
 
-check_jungja()
+# check_jungja()
+delete_connection_permit("/root/que.txt")

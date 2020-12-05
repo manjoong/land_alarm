@@ -1,220 +1,3 @@
-ps -ef |grep python
-ls
-tail -f nohup.out 
-ls
-cd ..
-ls
-cd 468/
-ls
-vi new_prd_list.txt 
-cat new_prd_list.txt 
-lsas
-ls
-vi parse_land.py 
-ls
-ps -ef |grep pythn
-ps -ef |grep pyth
-kill -9 13320
-ls
-cd station_list/
-ls
-rm -rf 1
-ls
-mkdir 1
-rm -rf 1
-ls
-cp -r org_code/ 1
-ls
-cd 1/
-ls
-vi parse_land.py 
-python3 parse_land.py 1 OPTS
-vi parse_land.py 
-ps -ef |grep python
-ls
-pwd
-cd ..
-ls
-rm -rf 468
-exit
-ps -ef
-ps -ef |grep python
-ls
-cd station_list/
-ls
-rm -rf 1
-ls
-l
-ls
-ps -ef |grep python
-cd 468/
-ls
-tail -f nohup.out 
-exit
-ls
-pip
-pip install pyfcm
-ls
-ccd station
-cd station_list/
-ls
-cd org_code/
-ls
-vi push_db.py
-ls
-send_alarm.py
-ls
-vi send_alarm.py
-ls
-cd station_list/
-ls
-cd org_code/
-ls
-python push_db.py 
-python send_alarm.py 
-ls
-python naver_land.py 
-history 
-ls
-cd station_list/
-ls
-cd org_code/
-ls
-python parse_land.py 1 OPST
-ls
-cd ..
-ls
-cd ..
-ls
-python naver_land.py 
-exit
-ls
-python naver_land.py 
-exit
-ls
-clear
-ls
-cd station_list/
-ls
-pip install PyMySQL
-ls
-cd org_code/
-ls
-python push_db.py 
-python3 push_db.py 
-python push_db.py 
-ls
-python push_db.py 
-ls
-pwd
-ls
-cd ..
-ls
-ps -ef |grep pytho
-cd 468/
-ls
-tail -f new_prd_list.txt  -n 100
-ls
-cd ..
-ls
-cp -r org_code/ ./3
-ls
-cd 3/
-ls
-vi new_prd_list.txt 
-ls
-vi parse_land.py 
-vi push_db.py 
-python push_db.py 
-ls
-python parse_land.py 3 OPST
-ls
-python parse_land.py 3 OPST
-python parse_land.py 468 OPST
-ls
-cd ..
-ls
-cd 468/
-ls
-ps -ef |grep python
-python -u parse_land.py 468 OPST
-ls
-tail -f nohup.out -n 1000
-ls
-pwd
-ls
-python -u parse_land.py 1 OPST
-pwd
-ls
-cd ..
-ls
-cd 3/
-ls
-cd ..
-ls
-cd org_code/
-ls
-python -u parse_land.py 0 OPST
-ls
-cd ..
-ls
-cd 3/
-ls
-python -u parse_land.py 1 OPST
-ls
-cd ..
-ls
-cd ..
-ls
-vi naver_land
-vi naver_land.py 
-python naver_land.py 
-cat naver_land.py 
-ls
-python naver_land
-python naver_land.py 
-ls
-python naver_land.py 
-ps -ef |grep python
-python naver_land_new.py 
-python naver_land.py 
-ls
-cat naver_land.py 
-ls
-ps -ef |grep python
-ls
-python naver_land.py 
-ps -ef |grep python
-ps -ef 263
-ps -ef |grep python
-kill -9 26363
-ps -ef |grep python
-ls
-vi naver_land.py 
-python naver_land.py 
-ls
-cd station_list/
-ls
-cd org_code/
-ls
-vi parse_land.py 
-ls
-cd ..
-ls
-cd 468/
-ls
-cat parse_land.py 
-cd ..
-ls
-cd org_code/
-ls
-vi parse_land.py 
-python parse_land.py 
-python parse_land.py 468 OPST
-ls
-vi parse_land.py 
-python parse_land.py 468 OPST
-vi parse_land.py 
 python parse_land.py 468 OPST
 vi parse_land.py 
 python parse_land.py 468 OPST
@@ -998,3 +781,220 @@ tail -f nohup.out -n 50
 cd ..
 ls
 tail -f 697/nohup.out 
+ls
+cd station_list/
+ls
+cd ..
+cd test/
+ls
+cd ..
+ls
+cd station_li
+cd station_list/
+ls
+cd org_code/
+ls
+cd ..
+ls
+cd org_code/
+ls
+cp parse_land.py ../jusun_test/
+ls
+cd ..
+cd jusun_test/
+ls
+cd ..
+cd manjoong_test/
+ls
+cd ..
+cd station_list/697/
+tail -f nohup.out
+cd ..
+ls
+cd 697/
+ls
+tail -f nohup.out 
+cd ..
+cd 697/
+tail -f nohup.out
+ls
+cd ..
+ls
+cd 157/
+tail -f nohup.out
+cd ..
+ls
+cd 697/
+tail -f nohup.out
+cd station_list/286/
+tail -f nohup.out
+cd ..
+ls
+cd 3/
+tail -f nohup.out
+cd ..
+ls
+cd 3/
+tail -f nohup.out
+cd ..
+ls
+cd 3/
+tail -f nohup.out
+cd ..
+cd 3
+tail -f nohup.out
+cd station_list/3/
+tail -f nohup.out
+ls
+cd ..
+ls
+cd 286/
+tail -f nohup.out
+cd ..
+sl
+ls
+cd 286/
+tail -f nohup.out\
+tail -f nohup.out
+ls
+cd ..
+ls
+tail -f 286/
+tail -f 286/nohup.out 
+cd ..
+ls
+cd station_list/
+cd 697/
+tail -f nohup.out
+cd ..
+ls
+cd 286/
+tail -f nohup.out
+cd station_list/157/
+tail -f nohup.out 
+ls
+cd ..
+ls
+rm -rf 157/ 286/ 3/ 697/
+ls
+cd 157/
+tail -f nohup.out
+ps -ef |grep python
+kill -9 10626 14939 14939 14939
+ps -ef |grep python
+kill -9 15366 15621
+ps -ef |grep python
+ls
+cd ..
+ls
+cd 157/
+tail -f nohup.out 
+ps -ef |grep python
+kill -9 16512 16723 16978 17228
+ls
+cd ..
+ls
+rm -rf 157/ 286/ 3/ 697/
+ls
+cd org_code/
+ls
+vi parse_land.py 
+ps -ef |grep python
+ls
+cd ..
+ls
+cd 157/
+tail -f nohup.out 
+ps -ef |grep python
+kill -9 18773 19024 19256 19510
+ps -ef |grep python
+ls
+cd ..
+ls
+rm -rf 157/ 286/ 3/ 697/
+cd 286/
+tail -f nohup.out 
+cd ..
+ls
+rm -rf 157/ 286/ 3/ 697/
+ps -ef |grep python
+ls
+cd 157/
+tail -f nohup.out 
+ps -ef |grep 
+ps -ef |grep  python
+ps -ef 
+ps -ef |grep python
+kill -9 10117 10117 10117 10882
+ls
+pwd
+vi que.txt 
+watch "cat que.txt"
+vi que.txt 
+ls
+python naver_land.py 
+ps -ef |grep python
+python naver_land.py 
+ls
+cd station_list/
+ls
+rm -rf 157/ 286/ 3/ 697/
+ls
+ps -ef |grep python
+watch "cat que.txt"
+pwd
+cd ..
+watch "cat que.txt"
+ps -ef |grep python
+ls
+git add .
+git commit -m "123"
+git push origin master
+watch "cat que.txt"
+ls
+vi que.txt 
+watch "cat que.txt"
+ps -ef |grep python
+kill -9 20450 20705 20959 21193
+ls
+cat que.txt 
+vi que.txt 
+cat que.txt 
+ls
+vi naver_land.py 
+ls
+python naver_land.py 
+ls
+vi que.txt 
+ls
+ps -ef |grep python'
+ps -ef |grep python
+watch "cat que.txt"
+ls
+cd station_list/
+ls
+ps -ef |grep python
+cd 4
+ls
+tail -f nohup.out 
+tail -f que.txt 
+ls -al 
+ls
+tail -f /root/que.txt 
+vi que.txt 
+ls
+cd station_list/
+ls
+cd 3/
+tail -f nohup.out 
+ps -ef |grep python
+watch "cat que.txt"
+cd roo
+ls
+cd station_list/ls
+cd station_list
+ls
+cd org_code/
+ls
+vi parse_land.py 
+ps -ef |grep python
