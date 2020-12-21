@@ -1,1000 +1,1000 @@
-python parse_land.py 468 OPST
-vi parse_land.py 
-python parse_land.py 468 OPST
-vi parse_land.py 
-python parse_land.py 468 OPST
-ls
-vi new_prd_list.txt 
-ls
-pwd
-ls
-vi parse_land.py 
-python parse_land.py 
-python parse_land.py 2 OPST
-ls
 cd ..
 ls
-cd ..
+cd 157/
 ls
-python naver_land.py 
-vi naver_land.py 
-python naver_land.py 
-vi naver_land.py 
-python naver_land.py 
-vi naver_land.py 
-python naver_land.py 
-ls
-vi naver_land
-vi naver_land.py 
-ls
-vi naver_land_new.py 
-vi naver_land.py 
-rm -rf nohup.out 
-nohup python -u naver_land.py &
-tail -f nohup.out 
+tail -f nohup.out -n 10000
 ps -ef |grep python
-ls
-vi naver_land.py 
-nohup python -u naver_land.py &
-tail -f nohup.out 
-nohup python -u naver_land.py &
-ls
-ps -ef |grep python
-kill -9 268889
-kill -9 26888
-ps -ef |grep python
-ls
-python naver_land.py 
-ps -ef |grep python
-kill -9 26899
 ls
 ps -ef |grep python
 ls
-tail -f nohup.out 
+exit
 ls
-vi naver_land.py 
-python naver_land.py 
- ls
-tail -f nohup.out 
-tail -f nohup.out  -n 1000
 ps -ef |grep python
-ls
-python naver_land.py 
-pip install fake_useragent
-ls
-vi naver_land
-vi naver_land.py 
-python naver_land.py 
-ls
-vi naver_land.py 
-python naver_land.py 
-nohup python -u naver_land.py  &
-tail -f nohup.out 
-l
-ls
-tail -f nohup.out 
-ps -ef |grep python
-vi nohup.out 
-ls
-cat naver_land.py 
 ls
 cd station_list/
-ls
-cd 3/
-ls
-vi new_prd_list.txt 
-ls
-pwd
-ls
-vi parse_land.py 
-ls
-ps -ef |grep python
-ls
-pwd
-nohup python -y parse_land.py 3 OPST &
-tail -f nohup.out 
-nohup python -u parse_land.py 3 OPST &
-tail -f nohup.out 
-ps -ef |grep python
-ls
-cd ..
-ls
-cd ..
-ls
-python naver_land.py 
-pwd
-ps -ef |grep python
-ls
-pwd
-ls
-vi naver_land.py 
-ls
-python naver_land.py 
-cd station_list/
-ls
-cd 3/
-ls
-tail -f nohup.out 
-rm -rf nohup.out 
-pwd
-ls
-cd ../..
-ls
-vi naver_land.py 
-cd station_list/3/
-ls
-vi parse_land.py 
-nohup python -u parse_land.py 3 OPST &
-tail -f nohup.out 
-ps -ef |grep python
-vi parse_land.py 
-nohup python -u parse_land.py 3 OPST &
-tail -f nohup.out 
-ls
-vi nohup.out 
-cd station_list/
-cd 3/
-tail -f nohup.out -n 50
-ls
-cd ..
-ls
-tail -f 3/nohup.out 
-ls
-cd station_list/
-ls
-cd 3/
-ls
-clear
-ls
-vi parse_land.py 
-ls
-cd ..
-ls
-cd ..
-ls
-python naver_land.py 
-ps -ef |grep python
-cd station_list/
-sl
-ls
-cd 3/
-ls
-vi parse_land.py 
-rm -rf nohup.out 
-nohup python -u parse_land.py 3 OPST &
-tail -f nohup.out 
-ls
-vi parse_land.py 
-nohup python -u parse_land.py 3 OPST &
-tail -f nohup.out 
-ps -ef |grep python 
-tail -f nohup.out 
-ls
-tail -f nohup.out 
-vi parse_land.py 
-ps -ef |grep python
-kill -9 30298
-rm -rf nohup.out 
-ls
-vi parse_land.py 
-cd ..
-ls
-cd 468/
-ls
-vi parse_land.py 
-ls
-cd ..
 ls
 cd org_code/
-ls
-vi parse_land.py 
-ls
-vi push_db.py 
 ls
 vi send_alarm.py 
+vi send_alarm
+vi send_alarm.py 
+python send_alarm.py 
+vi send_alarm
+vi send_alarm.py 
+exit
+ls
+watch "cat que.tct"
+watch "cat que.txt"
+ls
+vi que.txt 
+cd station_list/
+ls
+cd 468_APT/
+tail -f nohup.out -n 1000000
+ls
+cd ..
+ls
+cd ..
+ls
+watch "cat que.txt"
+ls
+cd station_list/
+ls
+cd org_code/
 ls
 pwd
 cd ..
 ls
-cd 468/
-ls
 cd ..
 ls
-rm -rf 3 468/
+watch "cat aue.txt"
+watch "cat que.txt"
 ls
-cp -r org_code/ 3
+cd station_list/
 ls
-cd org_code/
-ls
-vi parse_land.py 
-ls
-cd ..
-ls
-cp -r org_code/ ./468
-ls
-cd 3/
-ls
-nohup python -u parse_land.py 3 OPST &
-CD ..
-LS
-cd ..
-ls
-cd 468/
-nohup python -u parse_land.py 468 OPST &
-tail -f nohup.out 
+cd 468_OPST/
+tail -f nohup.out -n 10000000
+ps- ef |grep python
 ps -ef |grep python
-tail -f nohup.out 
-ls
-cd ..
-ls
-cd 3/
-ls
-tail -f nohup.out 
-vi parse_land.py 
-tail -f nohup.out 
-ls
-tail -f nohup.out 
-ps -ef |grep python
-tail -f nohup.out 
-kill -9 30733 30738
-ls
-tail -f nohup.out 
+clear
 ps -ef |grep python
 ls
 pwd
-vi parse_land.py 
-pwd
-ls
-python parse_land.py 3 OPST
-ls
 cd ..
 ls
-cd 468/
+cd 10_APT/
 ls
-vi parse_land.py 
-ls
-cd ..
-ls
-cd 3/
-ls
-vi parse_land.py 
-cd ..
-ls
-cd org_code/
-ls
-vi parse_land.py 
-ls
-cd ..
-ls
-rm -rf 3 468/
-ls
-cp -r org_code/ ./3
-cp -r org_code/ ./468
-ls
-cd 468/
-nohup python -u parse_land.py 469 OPST &
-tail -f nohup.out 
+tail -f nohup.out -n 100000
+ps -ef |greppython
 ps -ef |grep python
-kkill -9 30874
-kill -9 30874
-ps -ef |grep python
-nohup python -u parse_land.py 468 OPST &
-tail -f nohup.out 
-ls
-ps -ef |grep python
-kill -9 30886
-ps -ef |grep python
-ls
-nohup python -u parse_land.py 468 OPST &
-cd ..
-ls
-cd 3/
-l
-nohup python -u parse_land.py 3 OPST &
-tail -f nohup.out 
-ps -ef |grep python
-ls
-cd ..
-ls
-vi org_code/
-cd org_code/
-ls
-vi parse_land.py 
-ps -ef |grep python
-kill -9 30949 30953
+kill -9  10294 10367 10420 8790 8841 8892 6402 6485 6536
 ls
 ps -ef |grep python
 ls
 cd ..
 ls
-rm -rf 3
-rm -rf 468
+rm -rf 4_*
+rm -rf 10_*
+rm -rf 51_*
 ls
 cd ..
 ls
-git add .
-git commit -m "123"
-git push origin master
+vi que.txt 
+ls
+ps -ef |grep python
+kill -9 9567 9602 9653 1899 1999 2050
+ls
+kill -9 9567 9602 9653 1899 1999 2050
 ps -ef |grep python
 ls
 cd ..
 ls
 cd root/
+;s
+vi que.txt 
 ls
 cd station_list/
-la
 ls
-cd 3/
+rm -rf 286_*
+rm -rf 481_*
 ls
+ps -ef |grep 659
+ps -ef |grep python
+kill -9 5606 5665 5716 8084 8135 
+ps -ef |grep python
+ls
+cd 657_OPST/
+tail -f nohup.out  -n 1000
+ls
+cd ..
+ls
+rm -rf 657_*
+ls
+ps -ef |grep python
+rm -rf 659_*
+ls
+cd ..
+ls
+vi que.txt 
+ls
+cd station_list/
+ls
+cat ../que.txt 
+ls
+ps -ef |grep python
+ls
+cd ..
+ls
+vi que.txt 
+cat que.txt 
+ls
+cd ..
+s
+cd root/station_list/673_APT/
 tail -f nohup.out 
 ls
 cd ..
 ls
-cd 157/
+ps -ef |Grep python
+ps -ef |grep python
 ls
-tail -f nohup.out 
-vi nohup.out 
+ps -ef |grep python
+kill -9 2795 2823 2875 3344 3396 3662
 ls
-cd ..
+rm -rf 645_*
+rm -rf 651_*
 ls
-cd 286/
-ls
-vi nohup.out 
-cd ..
-ls
-cd 697/
-ls
-vi nohup.out 
-ls
-cd ,,
 cd ..
 s
 ls
-cd 3/
+vi que.txt 
 ls
-vi nohup.out 
+vi que.txt 
 ps -ef |grep python
+kill -9 4323 4397 4425 7321 7323 7381
 ls
-tail -f nohup.out 
-vi nohup.out 
+vi que.txt 
 ls
-cd ..
+cd station_list/
 ls
-cd org_code/
-ls
-cd ..
-ls
-rm -rf 157/ 286/ 3/ 697/
-vi org_code/
-ls
-cd org_code/
-ls
-vi parse_land.py 
-ls
-cd ..
-ls
-ps -ef |grep python
-ls
-cd 157/
-ls
-tail -f nohup.out 
-ls
-cd ..
-ls
-cd 286/
-tail -f nohup.out 
-ls
-cd ..
-ls
-cd 697/
-ls
-tail -f nohup.out 
-ls
-tail -f nohup.out 
-ls
-vi nohup.out 
-tail -f nohup.out 
-vi nohup.out 
-ls
-ps -ef |grep python
-kill -9 308 561 813 32526
-ps -ef |grep python
-ls
-cd ..
-ls
-rm -rf 157/ 286/ 3/
-ls
-rm -rf 697/
-ls
-cd org_code/
-ls
-vi parse_land.py 
-ls
-cd ..
-ls
-cd 286/
-ls
-tail -f nohup.out 
-ls
-vi nohup.out 
-ps -ef |grep python
-kill -9 1410
-ps -ef |grep python
-ls
-cd ..
-ls
-cd 3
-ls
-tail -f nohup.out 
-ls
-ps -ef |grep python
-kill -9 1750
-ls
-ps -ef |grep python
-ls
-cd ..
-ls
-rm -rf 286/ 3/
-ls
-cd org_code/
-ls
-vi parse_land.py 
-ps -ef |grep python
-ls
-cd ..
-ls
-cd 
-cd 3
-ls
-tail -f nohup.out 
+cd 654_APT/
 tail -f nohup.out -n 1000
 ls
 cd ..
 ls
-cd root/
+cd 654_OPST/
+ls
+tail -f nohup.out 
+ls
+cd ..
+ls
+cd 654_OR
+ls
+tail -f nohup.out 
+ls
+cd ..
+ls
+rm -rf 654_*
+ls
+ps -ef |grep python
+ls
+cd ..
+ls
+vi que.txt 
+watch "que.txt"
+watch "cat que.txt"
 ls
 cd station_list/
 ls
-cd 3/
-ls
-tail -f nohup.out  -n 10000
+cd 468_OR
+LS
+tail -f nohup.out -n 10000
 ps -ef |grep python
 ls
-vi parse_land.py 
+cd ..
+ls
+cd 468_OR/
+tail -f nohup.out 
+ls
+tail -f nohup.out -n 1000
+ps -ef |grep python
+ls
+cd ..
+ls
+ps -ef |gre python
+ps -ef |grep python
+ls
+cd 661_APT/
+ls -al
 ls
 tail -f nohup.out 
+cd ..
+ls
+ls -al
+ls
+ps -ef |grep python
+kill -9 26920 27192 27454 16847 16921 16972
+ls
+cd ..
+ls
+vi que.txt 
+ls
+cd station_list/
+ls
+rm -rf 659_*
+rm -rf 661_*
+rm -rf 673_*
+ls -al
+ps -ef |grep python
+kill -9 24437 24536 24592
+ls
+cd ..
+ls
+vi que.txt 
+ls
+cd station_list/
+ls
+rm -rf 645_*
+ps -ef |grep python
+ls
+cd 573_APT/
+tail -f nohup.out 
+ls
+cd ..
+ls
+df -h
+ps -ef |grep python
+ps -ej |grep python
+ps -e0 |grep python
+ps -eo |grep python
+ps -et |grep python
+ps -ec |grep python
+ps -ef |grep python
+ps -ec |grep 573
+ps -ej |grep 
+ps -ef |grep python
+ls
+watch "cat que.txt"
+ps -ef |grep python
+ls
+watch "cat que.txt"
+ls
+cd station_list/
+ls
+cd 468_OPST/
+tail -f nohup.out 
+ps -ef |grep python
+ls
+pwd
+cd ..
+ls
+cd 673_APT/
+tail -f nohup.out 
+tail -f nohup.out -n 100000
+ls
+cd ..
+ls
+cd 673_OR
+ls
+tail -f nohup.out 
+tail -f nohup.out  -n 1000
+ps -ef |grpe python
+ps -ef |gepe python
+ps -ef |grep python
+ls
+cd ..
+ls
+cd 468_APT/
+ls
+tail -f nohup.out -n 100000
+ls
+cd ..
+ls
+cd 673_OR/
+ls
+tail -f nohup.out 0n 100000000
+tail -f nohup.out -n 100000000
+vi nohup.out 
+ls
+pwd
+ccd ..
+cd ..
+l
+s
+ls
+cd ..
+ls
+cd station_list/
+ls
+cd org_code/
+ls
+cat delete_db.py 
+q!
+ls
+cd ..
+ls
+ps -ef |grep python
+kill -9 11412 11706 11964 12220 12474 12728
+ls
+rm -rf 468_APT/ 468_OPST/ 468_OR/ 673_APT/ 673_OPST/ 673_OR/
+ls
+cd ..ls
+cd ..
+ls
+vi que.txt 
+ps -ef |grep python
+pip install bs4
+ls
+pwd
+ls
+cd station_list/
+ls
+cd org_code/
+ls
+python image_parser.py 
+pip install urlopen
+pip install urllib
+pip install urllib3
+python image_parser.py 
+pip install requests
+python image_parser.py 
+cat /etc/hosts
+ls
+cd ..
+ls
+cd 573_OR/
+ls
+tail -f nohup.out  -n 10000
+ls
+cd ..
+ls
+cd 468_OPST/
+tail -f nohup.out -n 10000
+ls
+tail -f nohup.out -n 1000000
+ls
+watch "cat que.txt"
+vi que.txt 
+watch "cat que.txt"
+ls
+pd
+pwd
+ls
+cd station_list/
+s
+cd org_code/
+ls
+cd ..
+ls
+cd 157/
+ls
+tail -f nohup.out -n 1000
 ls
 pwd
 cd ..
 ls
 cd org_code/
 ls
-vi parse_land.py 
+python send_alarm.py 
+ls
+ps -ef |grep python
+kill -9 22196 22426 22928
+lss
 ls
 cd ..
 ls
-rm -rf 3
+cd ..
 ls
+vi que.txt 
+cd station_list/
+ls
+rm -rf 157/ 286/ 3/ 697/
 ps -ef |grep python
 ls
 cd org_code/
 ls
-vi parse_land.py 
+vi send_alarm.py 
+ps -ef |grep python
 ls
 cd ..
 ls
-rm -rf 3/
+cd ..
 ls
+watch "cat que.txt"
+ls
+cd station_list/
+ls
+cd 286/
+ls
+tail -f nohup.out 
+pwd
+cd ..
+ls
+cd org_code/
+python send_alarm.py 
+ps -ef |grep python
+python send_alarm.py 
+ps -ef |grep python
+ls
+ps -ef |grep python
+ls
+ps -ef |grep python
+ls
+pwd
+ls
+cd ..
+ls
+cd 697/
+ls
+tail -f nohup.out  -n 10000
+ps -ef |grep python
+ls
+cd ..
+ls
+cd 157/
+ls
+tail -f nohup.out  -n 1000
+ps -ef |grep python
+kill -9 23606 24173 25229
+ls
+cd ..
+ls
+cd ..
+ls
+vi que.txt 
+cd station_list/
+ls
+rm -rf 157/ 286/ 3/ 468/ 697/
+lw
+ls
+cd ..
+ls
+cd station_list/
+ls
+cd org_code/
+ls
+vi push_db.py 
+ps -ef |grep python
+ls
+ps -ef |grep python
+ls
+cd ..
+ls
+cd ..
+ls
+watch "cat que.txt"
+vi que.txt 
+ls
+watch "que.txt"
+watch "cat que.txt"
+vi que.txt 
+watch "cat que.txt"
+vi que.txt 
+watch "cat que.txt"
+vi que.txt 
+watch "cat que.txt"
+v que.txt 
+vi que.txt 
+ls
+vi naver_land.py 
+ls
+vi que.txt 
+ls
+vi temp.python.py
+mv temp.python.py temp_code.py 
+ls
+python temp_code.py 673 APT
+vi temp_code.py 
+python temp_code.py 673 APT
+vi temp_code.py 
+python temp_code.py 673 APT
+vi temp_code.py 
+python temp_code.py 673 APT
+vi temp_code.py 
+python temp_code.py 673 APT
+vi temp_code.py 
+ls
+pwd
+vi que.txt 
+ls
+watch "cat que.txt"
+ls
+ps -ef |grep python
+ls
+cd station_list/
+ls
+cd 157/
+ls
+tail -f nohup.out 
+tail -f nohup.out -n 1000
+ls
+cat push_db.pyc 
+ls
+ps -ef |grep python
+kill -9 3648
+ls
+rm -rf push_db.pyc 
+ls
+rm -rf parse_land_origin.py 
+ls
+rm -rf nohup.out 
+ls
+cd ..
+ls
+rm -rf 157/ 468/
+ls
+cd org_code/
+ls
+ps -ef |grep python
+rm -rf parse_land_origin.py 
+ls
+cd ..
+ls
+pwd
+ls
+cd org_code/
+ls
+pip install pytz
+ls
+cd ..
+ls
+cd /root
+ls
+ps -ef |grep python
+python naver_land
+python naver_land.py 
+ls
+cd /root
+ls
+pwd
+ls
+python naver_land.py 
+pip install django-utils
+python naver_land.py 
+pip install django-utils
+python naver_land.py 
+pip install django-utils
+python --version
+import django
+python
+quit
+pip install django
+pip install django.utils
+python naver_land.py 
+ls
+cd station_list/
+ls
+ㅔls
+ls
+cd 157/
+ls
+tail -f nohup.out 
+ls
+cd ..
+ls
+cd ..
+ls
+vi que.txt 
+cd station_list/
+ls
+cd 157/
+ls
+tail -f nohup.out 
+ls
+pwd
+ls
+cd ..
 l
 ls
-cd 3/
+cd org_code/
+ls
+vi delete_db.py
+ps -ef |grep python
+ls
+python
+ls
+python delete_db.py
+ps -ef |grep python
+kill -9 10520
+killl -9 10169 10811
+ps -ef |grep python
+ls
+pwd
+cd ..
+ls
+rm -rf 157/
+ls
+ps -f |grep python
+ps -ef |grep python
+ls
+cd ..
+cd station_list/
+ls
+cd 157/
 ls
 tail -f nohup.out 
-vi nohup.out 
+tail -f nohup.out -n 100000
+ls
+pwd
+ls
 ps -ef |grep python
-history
 ls
-vi parse_land.py 
-ls
-pwd
-ls
-cd ..
-ls
-cp org_code/ manjoong_test
-ls
-cp -r org_code/ manjoong_test
-ls
-cd manjoong_test/
-ls
-pwd
-ls
-cd /roo
-cd /root
-ls
-que.txt
-vi que.txt
-ls
-vi python que.py
-python que.txt 
-python que.py
-vi python que.py
-s
-lks
-ks
-ls
-vi python 
-mv python que.py
-python que.py 
-vi que.py 
-vi que.txt 
-vi que.py 
-python que.py 
-vi que.py 
-ls
-cd station_list/
-ls
-cd org_code/
-ls
-vi parse_land.py 
-ls
-pwd
-ls
-cd ..
-ls
-cd manjoong_test/
-ls
-python parse_land.py 
-ls
-cd /root
-ls
-vi que.txt 
-cd station_list/
-ls
-cd manjoong_test/
-ls
-
-python parse_land.py 
-cd /root
-ls
-vi que.txt 
-cd station_list/
-ls
-cd manjoong_test/
-ls
-python parse_land.py 
-cd /root
-ls
-vi que.txt 
-cd station_list/
-ls
-cd manjoong_test/
-ls
-python parse_land.py 
-python parse_land.py 468
-vi /root/que.txt 
-python parse_land.py 468
-python parse_land.py 469
-vi /root/que.txt 
-python parse_land.py 469
-python parse_land.py 468
-ls
-python parse_land.py 468
-cat /root/que.txt 
-python parse_land.py 468
-cat /root/que.txt 
-python parse_land.py 469
-cat /root/que.txt 
-python parse_land.py 777
-cat /root/que.txt 
-python parse_land.py 777
-cat /root/que.txt 
-vi /root/que.txt 
-python parse_land.py 777
-cat /root/que.txt 
-python parse_land.py 468
-cat /root/que.txt 
-python parse_land.py 468
-python parse_land.py 777
-cat /root/que.txt 
-python parse_land.py
-cat /root/que.txt 
-python parse_land.py
-cat /root/que.txt 
-python parse_land.py 666
-cat /root/que.txt 
-python parse_land.py
-cat /root/que.txt 
-python parse_land.py
-cat /root/que.txt 
-cat /root/que.txt 1
-python parse_land.py 1
-python parse_land.py 666
-cat /root/que.txt 1
-cat /root/que.txt
-python parse_land.py 777
-vi /root/que.txt
-vi /root/que.txt 
-ls
-pwd
-ls
-python parse_land.py 468 OPST
 ps -ef |grep python
-kill -9 4296
+kill -9 11090
 ls
+kill -9 11090
+ps -ef |grep python
 cd ..
 ls
-rm -rf 3/
-ls
-vi /root/que.txt 
-ls
-cd org_code/
-ls
-mv parse_land.py parse_land_origin.py
-ls
-cd ..
-ls
-cp manjoong_test/parse_land.py org_code/
-cd org_code/
-ls
-cd ..
+rm -rf 157/
 ls
 ps -ef |grep python
 ls
 cd 157/
 ls
 tail -f nohup.out 
-vi /root/que.txt 
+ps -ef |grep python 
+kill -9 11726
 ls
 cd ..
 ls
-cd 286/
+rm -rf 157/
+ps -ef |grep python 
+ls
+cd 157/
 ls
 tail -f nohup.out 
-ls
-vi parse_land.py 
-ls
-tail -f nohup.out  -n 10000
-vi parse_land.py 
+tail -f nohup.out -n 100000
 ps -ef |grep python
 ls
-cd ..
-ls
-rm -rf 157 286 3 697
-ls -al
-cd org_code/
-ls
-vi parse_land
-ls
-vi parse_land.py 
-ls
-cd ..
-ls
-cd org_code/
-ls
-vi parse_land.py 
 ps -ef |grep python
 ls
-cd ..
-s
-ls
-cd ..
-ls
-watch "vi que.txt"
-watch "cat que.txt"
-ps -ef |grep python
-kill -9 5953 6140 6390 6640
-ls
-cd station_list/
-ls
-rm -rf 157 286 3 697
-ls
-vi manjoong_test/
-cd org_code/
-ls
-vi parse_land.py 
-ls
-qkdnf22@@
-cd root"
 cd /root
 ls
 watch "cat que.txt"
+ls
 vi que.txt 
-watch "cat que.txt"
+ls
 vi que.txt 
+ls
+watch "que.txt"
 watch "cat que.txt"
 ps -ef |grep python
-kill -9 7261 7700 7951
+ls
+cd station_list/
+ls
+cd 286/
+ls
+tail -f nohup.out -n 10000
+ps -ef |grep python 
+kill -9 12017 13208
+ls
+cd ..
+ls
+rm -rf 157/ 286/ 697/
+ls
+cd ..
 ls
 cd ..
 ls
 cd root/
 ls
-cd station_list/
-ls
-rm -rf 157 286 3 697 
-ls
-cd org_code/
-ls
-vi parse_land
-vi parse_land.py 
-ls
-cd /root
-ls
 python naver_land.py 
-ls
-vi naver_land.py 
-cd station_list/org_code/
-ls
-vi parse_land.py 
-vi naver_land.py 
-vi parse_land.py 
-pwd
-cd root
-ls
-pwd
-ls
-cd /root
+ps -ef |grep python
+kill -9 10169 10811
+ps -ef |grep python
 ls
 vi que.txt 
-python naver_land.py 
 ls
 cd station_list/
 ls
-cd org_code/
-ls
-vi parse_land.py 
-python naver_land.py 
-ls
-cd /root
-python naver_land.py 
-vi que.txt 
-watch "cat que.txt"
-vi que.txt 
-watch "cat que.txt"
-vi que.txt 
-watch "cat que.txt"
-cd station_list/
-cd 697/
-tail -f nohup.out -n 50
 cd ..
 ls
-tail -f 286/nohup.out 
+python naver_land.py 
+ps -ef |grep ython
+ps -ef |grep python
+watch "ps -ef |grep python"
+ls
+clear
+ls
+cat station_list/org_code/send_alarm.py 
+ls
 cd station_list/
+ls
+cd org_code/
+ls
+cp push_db.py push_db_temp.py 
+python push_db_temp.py 
+clear
+python push_db_temp.py 
+clear
+python push_db_temp.py 
+ls
+ps -ef |grep python 
+kill -9 13955 14146 14400 14998
+ls
+cd ..
+ls
+rm -rf 157/ 286/ 3/ 697/
+ls
+cd org_code/
+ls
+rm -rf delete_db.pyc 
+ls -al
+ls
+cd ..
 ls
 ps -ef |grep python
 ls
 cd 157/
-tail -f nohup.out -n 50
+ls
+cat push_db.py
+ls
+ps -ef |grep python
 ls
 pwd
 cd ..
 ls
-tail -f ./157/nohup.out 
-ps -ef |grep python
-kill -9 8862 9024 9340 9532
+c 157/
 ls
-rm -rf 157 286 3 697 
-tail -f ./157/nohup.out 
-cd station_list/
+cd 157/
+ls
+tail -f nohup.out -n 1000
+ls
+cd ..
+s
+ls
 cd 286/
-tail -f nohup.out -n 50
-cd ..
-ls
-tail -f 697/nohup.out 
-ls
-cd station_list/
-ls
-cd ..
-cd test/
-ls
-cd ..
-ls
-cd station_li
-cd station_list/
-ls
-cd org_code/
-ls
-cd ..
-ls
-cd org_code/
-ls
-cp parse_land.py ../jusun_test/
-ls
-cd ..
-cd jusun_test/
-ls
-cd ..
-cd manjoong_test/
-ls
-cd ..
-cd station_list/697/
-tail -f nohup.out
-cd ..
-ls
-cd 697/
 ls
 tail -f nohup.out 
-cd ..
-cd 697/
-tail -f nohup.out
+tail -f nohup.out  -n 1000
 ls
 cd ..
 ls
-cd 157/
-tail -f nohup.out
-cd ..
+cd 
 ls
-cd 697/
-tail -f nohup.out
-cd station_list/286/
-tail -f nohup.out
-cd ..
+pwd
+cd station_list/
 ls
 cd 3/
-tail -f nohup.out
-cd ..
 ls
-cd 3/
-tail -f nohup.out
-cd ..
-ls
-cd 3/
-tail -f nohup.out
-cd ..
-cd 3
-tail -f nohup.out
-cd station_list/3/
-tail -f nohup.out
+tail -f nohup.out -n 1000
 ls
 cd ..
 ls
-cd 286/
-tail -f nohup.out
-cd ..
-sl
+cd 697/
 ls
-cd 286/
-tail -f nohup.out\
-tail -f nohup.out
+tail -f nohup.out 
 ls
 cd ..
 ls
-tail -f 286/
-tail -f 286/nohup.out 
+rm -rf 157/ 286/ 3/ 697/
 cd ..
 ls
 cd station_list/
+ls
+cd ro
+cd org_code/
+ls
+cat send_alarm.py 
+:q!
+ls
+cd ..
+ls
+cd ..
+ls
+cd ..
+ls
+cd root/
+ls
+pwd
+vi que.txt 
+ps -ef |grep python
+ls
+cd station_list/
+ls
+cd 157/
+ls
+tail -f nohup.out 
+ps -ef |grep python
+tail -f nohup.out 
+ps -ef |grep python
+ls
+cd ..
+ls
 cd 697/
-tail -f nohup.out
-cd ..
-ls
-cd 286/
-tail -f nohup.out
-cd station_list/157/
 tail -f nohup.out 
 ls
-cd ..
-ls
-rm -rf 157/ 286/ 3/ 697/
-ls
-cd 157/
-tail -f nohup.out
-ps -ef |grep python
-kill -9 10626 14939 14939 14939
-ps -ef |grep python
-kill -9 15366 15621
-ps -ef |grep python
+pwd
 ls
 cd ..
 ls
-cd 157/
+cd 697/
+ls
 tail -f nohup.out 
 ps -ef |grep python
-kill -9 16512 16723 16978 17228
+ls
+ps -ef |grep python
+pwd
+ls
+pwd
 ls
 cd ..
-ls
-rm -rf 157/ 286/ 3/ 697/
 ls
 cd org_code/
 ls
-vi parse_land.py 
-ps -ef |grep python
+python push_db_temp.py 
 ls
+pwd
 cd ..
 ls
 cd 157/
+ls
 tail -f nohup.out 
 ps -ef |grep python
-kill -9 18773 19024 19256 19510
-ps -ef |grep python
+kill -9 29106 29376 29606 29856 30106
 ls
 cd ..
 ls
-rm -rf 157/ 286/ 3/ 697/
-cd 286/
-tail -f nohup.out 
-cd ..
-ls
-rm -rf 157/ 286/ 3/ 697/
-ps -ef |grep python
-ls
-cd 157/
-tail -f nohup.out 
-ps -ef |grep 
-ps -ef |grep  python
-ps -ef 
-ps -ef |grep python
-kill -9 10117 10117 10117 10882
-ls
-pwd
-vi que.txt 
-watch "cat que.txt"
-vi que.txt 
-ls
-python naver_land.py 
-ps -ef |grep python
-python naver_land.py 
-ls
-cd station_list/
-ls
-rm -rf 157/ 286/ 3/ 697/
+rm -rf 157/ 286/ 3/ 468/ 697/
 ls
 ps -ef |grep python
-watch "cat que.txt"
-pwd
-cd ..
-watch "cat que.txt"
-ps -ef |grep python
-ls
-git add .
-git commit -m "123"
-git push origin master
-watch "cat que.txt"
-ls
-vi que.txt 
-watch "cat que.txt"
-ps -ef |grep python
-kill -9 20450 20705 20959 21193
-ls
-cat que.txt 
-vi que.txt 
-cat que.txt 
-ls
-vi naver_land.py 
-ls
-python naver_land.py 
-ls
-vi que.txt 
-ls
-ps -ef |grep python'
-ps -ef |grep python
-watch "cat que.txt"
-ls
-cd station_list/
-ls
-ps -ef |grep python
-cd 4
-ls
-tail -f nohup.out 
-tail -f que.txt 
-ls -al 
-ls
-tail -f /root/que.txt 
-vi que.txt 
-ls
-cd station_list/
 ls
 cd 3/
 tail -f nohup.out 
 ps -ef |grep python
-watch "cat que.txt"
-cd roo
 ls
-cd station_list/ls
-cd station_list
+[wd
+pwd
+cd //
+cd or
 ls
-cd org_code/
+cd root/station_list/org_code/
 ls
-vi parse_land.py 
+python push_db_temp.py 
+\LS
+ls
+cat send_alarm.py 
+ls
+pwd
+cp send_alarm.py send_alarm_org.py
+ls
+pwd
+python send_alarm.py 
+clear
+python send_alarm.py 
+ls
 ps -ef |grep python
+kill -9 22887 23216 23388 23638 23888 24401
+ps -ef |grep python
+ls
+cat send_alarm.py 
+ls
+cd ..
+ls
+rm -rf 157 286 3 468 5 697
+ps -ef |grep python
+kill -9 555
+ls
+rm -rf 673_OPST/
+ls
+ps -ef |grep python
+ls
+cd ..
+ls
+cd station_list/
+ls
+ps -ef |grep python
+ls
+cd 673_APT/
+ls
+tail -f nohup.out 
+tail -f nohup.out  -n 1000
+cd..
+ls
+pwd
+cd ..
+ls
+rm -rf 673_APT/ 673_OPST/
+ps -ef |grep python
+ls
+cd 673_APT/
+ls
+tail -f nohup.out -n 100
+ps -ef |grep python
+kkill -9 1489
+ps -ef |grep python
+kkill -9 1489
+kill -9 1489
+ls
+cd ..
+ls
+rm -rf 673_APT/
+ls
+cd 673_APT/
+ls
+tail -f nohup.out 
+ls
+cd ..
+ls
+rm -rf 673_APT/
+ps -ef |grep python
+kill -9 1943
+ls
+cd 673_APT/
+ls
+tail -f nohup.out 
+ps -ef |grep python
+rm -rf 2229
+ps -ef |gre python
+ps -ef |grep python
+ls
+kill -9 
+kill -9 2229
+ls
+pwd
+cd ..
+s
+cd ..
+ls
+pwd
+cd ..
+ls
+cd root/
+ls
+pwd
+ls
+cd station_list/
+ls
+rm -rf 673_APT/
+ls
+ps -ef |grep python
+ls
+cd 673_APT/
+;s
+ls
+tail -f nohup.out  -n 1000
+ps -ef |grep python
+kill -9 10420
+ls
+cd ..
+ls
+rm -rf 673_APT/
+ls
+cd 673_APT/
+tail -f nohup.out 
+ps -ef |grep python
+kill -9 10703
+ls
+cd ..
+ls
+rm -rf 673_APT/
+ps -ef |grep python
+ls
+cd 673_APT/
+ls
+tail -f nohup.out 
+ls
+pwd
+cd ..
+ls
+rm -rf 673_APT/
+ls
+ps -ef |grep python
+kill -9 10979
+ps -ef |grep python
+ls
+cd 673_APT/
+ls
+tail -f nohup.out - 100
+tail -f nohup.out -n 100
+ls
+ps -ef |grep python
+ls
+cd station_list/
+ls
+ps -ef |grep python
+pwd
+cd 673_OR
+ls
+tail -f nohup.out 

@@ -2,11 +2,15 @@
 
 import threading
 import time
-import datetime
+# import datetime
 import requests
 import json
 import logging
 from fake_useragent import UserAgent
+from datetime import datetime
+# from django.utils import timezone
+from pytz import common_timezones, timezone
+# from time import localtime, strftime
 
 
 
@@ -59,7 +63,7 @@ def delete_connection_permit(que_file):
 
 def check_jungja():
 
-    now = time.localtime()
+    # now = time.localtime()
 
 
     resp = requests.get(URL, params=param, headers=header)
@@ -80,21 +84,23 @@ def check_jungja():
     if result is None:
         logging.error('no datas')
     
+    KST = datetime.now(timezone('Asia/Seoul'))
+    kst_datetime=KST.strftime('%Y-%m-%d %H:%M:%S')
+    print(kst_datetime)
     print(newPrdId)
     print(newPrdName)
     print(newPrdDate)
-    print "%04d/%02d/%02d %02d:%02d:%02d" % (now.tm_year, now.tm_mon, now.tm_mday, now.tm_hour+9, now.tm_min, now.tm_sec)
 
     MyFile = open('new_prd_list.txt', 'a')
     MyFile.write("\n")
     MyFile.write(newPrdId)
     MyFile.write(newPrdName)
     MyFile.write(newPrdDate)
-    MyFile.write("%04d/%02d/%02d %02d:%02d:%02d" % (now.tm_year, now.tm_mon, now.tm_mday, now.tm_hour+9, now.tm_min, now.tm_sec))
+    MyFile.write(kst_datetime)
     MyFile.close()
 
     old_id = newPrdId
     #threading.Timer(900, check_jungja).start()
 
-# check_jungja()
-delete_connection_permit("/root/que.txt")
+check_jungja()
+# delete_connection_permit("/root/que.txt")

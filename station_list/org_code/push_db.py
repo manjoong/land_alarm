@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 import pymysql
-# def push_sale(name, price, img_link, naver_link, type, station, create_dt):
-def push_sale():
+def push_sale(sale_id, sale_name, sale_price, sale_img_link, sale_naver_link, sale_type, sale_station):
+# def push_sale():
     conn = pymysql.connect(
         user='dev_user', 
         passwd='1q2w3e!@#',
@@ -15,16 +15,17 @@ def push_sale():
 
     try:
         # INSERT
-        with conn.cursor() as curs:
-            sql = "insert into sale(name, price, img_link, naver_link, type, station, create_dt) values (%s, %s, %s, %s, %s, %s, %s)"
-            curs.execute(sql, ('파빌리온', 1.5, 'www.naver.com', 'www.naver.com/183', 'OPST', '468', '2020-12-24 17:22:21'))
+        with conn.cursor() as curs: 
+            sql = "insert into sale(naver_id, name, price, img_link, naver_link, type, station) values (%s, %s, %s, %s, %s, %s, %s)"
+            # curs.execute(sql, (str(name), price, str(), 'www.naver.com/183', 'OPST', '468'))
+            curs.execute(sql, (sale_id, sale_name, sale_price, sale_img_link, sale_naver_link, sale_type, sale_station))
     
         conn.commit()
     
         # SELECT
         with conn.cursor() as curs:
-            sql = "select * FROM sale"
-            curs.execute(sql)
+            sql = "select * from sale where id=%s"
+            curs.execute(sql, (str(sale_id)))
             rs = curs.fetchall()
             for row in rs:
                 print(row)
@@ -47,4 +48,4 @@ def push_sale():
 
     # print(result)
 
-push_sale()
+# push_sale()

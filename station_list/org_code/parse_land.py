@@ -1,12 +1,17 @@
 # -*- coding: utf-8 -*-
 import threading
 import time
-import datetime
 import requests
 import json
 import logging
 import sys
 from fake_useragent import UserAgent
+import push_db
+import delete_db
+import send_alarm
+from datetime import datetime
+# from django.utils import timezone
+from pytz import common_timezones, timezone
 
 
 
@@ -18,14 +23,16 @@ def check_connection_permit(que_file):
     f.close()
     if len(line) != 0:
         last_line = line[-1]
-        if int(last_line) == int(sys.argv[1]):
+        if last_line[-1] == '\n':
+            last_line = last_line[:-1]
+        if str(last_line) == str(str(sys.argv[1])+"_"+str(sys.argv[2])):
             return True
 
 def request_connection_permit(que_file):
     f = open(str(que_file),'r+')
     lines = f.read()
     f.seek(0, 0) #get to the first position
-    f.write(str(sys.argv[1]).rstrip('\r\n') + '\n' + lines)
+    f.write(str(sys.argv[1]+"_"+str(sys.argv[2]).rstrip('\r\n') + '\n' + lines))
     f.close()
 
 
@@ -118,12 +125,13 @@ def get_prd(location):
             'sort': 'dates',
         }
 
-        header = {
-            'User-Agent': ua.random,
-            #'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.220 Whale/1.3.51.7 Safari/537.36',
-        #'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4280.67 Safari/537.36',
-            'Referer': 'https://m.land.naver.com/'
-        }
+        # header = {
+        #     'User-Agent': ua.random,
+        #     #'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.220 Whale/1.3.51.7 Safari/537.36',
+        # #'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4280.67 Safari/537.36',
+        #     # 'Referer': 'https://m.land.naver.com/'
+        #     'Referer': 'https://www.kakao.com'
+        # }
 
         logging.basicConfig(level=logging.INFO)
 
@@ -132,15 +140,35 @@ def get_prd(location):
         while True:
             page += 1
             param['page'] = page
+            header_list = ["https://www.kakao.com", "https://www.naver.com", "https://www.hanmail.com", "https://www.google.com"]
+            header = {
+                'User-Agent': ua.random,
+                #'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.220 Whale/1.3.51.7 Safari/537.36',
+            #'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4280.67 Safari/537.36',
+                # 'Referer': 'https://m.land.naver.com/'
+                'Referer': header_list[page%3]
+            }
+
             data=[]
             resp = requests.get(URL, params=param, headers=header)
-            time.sleep(3) #3초 쉬고 다음 역
+            time.sleep(10) #3초 쉬고 다음 역
             if resp.status_code != 200:
                 logging.error('invalid status: %d' % resp.status_code)
             else:
                 print("200 정상")
 
-            data = json.loads(resp.text)
+        
+            # data= json_load_custom(resp.text)
+
+            try:
+                data = json.loads(resp.text)
+                # data= json_load_custom(resp.text)
+            except:
+                print("제이슨 로드중 오류발생")
+                print(resp.text)
+                print(param)
+                print(URL)
+                print(header)
 
             for i in data['body']:
                 result.append(i)
@@ -155,7 +183,13 @@ def get_prd(location):
         return result
 
         
-
+# def json_load_custom(text):
+#     try:
+#         data = json.loads(text)
+#     except:
+#         print("제이슨 로드중 오류발생")
+#         print(text)
+#     return data
             
 
 def main():
@@ -163,7 +197,6 @@ def main():
     global old_prd_id_list
     global station_location
 
-    now= time.localtime()
     new_prd_id = [] #새로 추가된 매물의 id 배열
     delete_prd_id = [] # 삭제된 매물의 id 배열
     new_prd = [] #새로 추가된 매물의 전체 정보
@@ -180,7 +213,9 @@ def main():
     for i in delete_prd_id: #id 값을 기반으로 정보를 찾아 new_prd 배열에 넣음
         delete_prd.append(find_content(i, old_prd_list))
 
-    print "%04d/%02d/%02d %02d:%02d:%02d" % (now.tm_year, now.tm_mon, now.tm_mday, now.tm_hour+9, now.tm_min, now.tm_sec)
+    KST = datetime.now(timezone('Asia/Seoul'))
+    kst_datetime=KST.strftime('%Y-%m-%d %H:%M:%S')
+    print(kst_datetime)
     print("기존 매물의 갯수는")
     print(len(old_prd_list))
     print("새 데이터의 매물의 갯수는")
@@ -198,28 +233,51 @@ def main():
             print(i)
     else:
         print("삭제된 매물이 없습니다.")
-    
-    print("가장 최상의 매물은")
-    newPrdId=new_prd_list[0]['atclNo']
-    newPrdName=new_prd_list[0]['atclNm']
-    newPrdDate=new_prd_list[0]['atclCfmYmd']
-    newPrdName=newPrdName.encode('utf8')
-    newPrdDate=newPrdDate.encode('utf8')
-    print(newPrdName)
-    print(newPrdDate)
-    print(newPrdId)
+
+    if len(new_prd_list)!=0:
+        print("가장 최상의 매물은")
+        newPrdId=new_prd_list[0]['atclNo']
+        newPrdName=new_prd_list[0]['atclNm']
+        newPrdDate=new_prd_list[0]['atclCfmYmd']
+        newPrdName=newPrdName.encode('utf8')
+        newPrdDate=newPrdDate.encode('utf8')
+        print(newPrdName)
+        print(newPrdDate)
+        print(newPrdId)
 
     print("새로운 매물과 삭제된 매물은 5분씩 검색하며, 정보는 new_prd_list_new_2.txt에 저장 됩니다.")
 
     if len(new_prd) != 0 or len(delete_prd) !=0:
         MyFile = open('new_prd_list.txt', 'a')
         MyFile.write("\n")
-        MyFile.write("%04d/%02d/%02d %02d:%02d:%02d" % (now.tm_year, now.tm_mon, now.tm_mday, now.tm_hour+9, now.tm_min, now.tm_sec))
+        MyFile.write(kst_datetime)
         MyFile.write("추가된 매물")
         MyFile.write(str(new_prd))
         MyFile.write("삭제된 매물")
         MyFile.write(str(delete_prd))
         MyFile.close()
+    
+    if len(new_prd) != 0:
+        for value in new_prd:
+            sale_id=value['atclNo']
+            sale_name=value['atclNm']
+            sale_price=value['prc']
+            if value.get('repImgUrl'):
+                sale_img_url=value['repImgUrl']
+            else:
+                sale_img_url=""
+            sale_naver_link = str("https://m.land.naver.com/article/info/" + value['atclNo'])
+            sale_type = str(sys.argv[2])
+            sale_station= str(sys.argv[1])
+            sale_name=sale_name.encode('utf8')
+            push_db.push_sale(sale_id, sale_name, sale_price, sale_img_url, sale_naver_link, sale_type, sale_station)
+            send_alarm.send_sale_alarm(sale_station, sale_type, sale_name, sale_price, sale_naver_link)
+        
+
+    if len(delete_prd) != 0:
+        for value in delete_prd:
+            sale_id=value['atclNo']
+            delete_db.delete_sale(sale_id)
 
 
     
